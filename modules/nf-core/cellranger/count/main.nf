@@ -31,6 +31,7 @@ process CELLRANGER_COUNT {
         --sample=$sample_arg \\
         --localcores=$task.cpus \\
         --localmem=${task.memory.toGiga()} \\
+        --include-introns=false \\
         $args
 
     cat <<-END_VERSIONS > versions.yml
